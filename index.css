@@ -1,0 +1,249 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080d18;
+    color: white;
+}
+
+/* CABEÇALHO */
+header {
+    background: #101a2d;
+    padding: 25px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #00aaff;
+}
+
+.logo span {
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+/* APRESENTAÇÃO */
+.hero {
+    text-align: center;
+    padding: 85px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #101f3a,
+        #06101e
+    );
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #2782d8;
+}
+
+.hero p {
+    color: #b9c5d6;
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+/* BOTÃO PRINCIPAL */
+.btn {
+    display: inline-block;
+    background: #009dff;
+    color: white;
+
+    padding: 13px 25px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #0078c9;
+}
+
+/* SECÇÕES */
+.container {
+    padding: 50px 8%;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* CATEGORIAS */
+.categories {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 20px;
+}
+
+.category {
+    background: #17243a;
+    padding: 30px 15px;
+
+    text-align: center;
+    border-radius: 10px;
+
+    border: 1px solid #263c5a;
+    transition: 0.3s;
+}
+
+.category:hover {
+    background: #009dff;
+    transform: translateY(-5px);
+}
+
+.category h3 {
+    font-size: 18px;
+}
+
+/* PRODUTOS */
+.products {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+}
+
+.card {
+    background: #111c30;
+    border-radius: 13px;
+    overflow: hidden;
+
+    border: 1px solid #1d304c;
+    transition: 0.3s;
+
+    padding-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #009dff;
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 18px 15px 10px;
+}
+
+.card p {
+    color: #9eafc5;
+    font-size: 14px;
+    margin: 0 15px 15px;
+}
+
+.card h4 {
+    color: #00aaff;
+    font-size: 22px;
+    margin: 0 15px 18px;
+}
+
+/* BOTÃO DE ENCOMENDA */
+.order {
+    display: block;
+    text-align: center;
+
+    background: #087d4b;
+    color: white;
+
+    padding: 12px;
+    margin: 0 15px;
+
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.order:hover {
+    background: #0ba963;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    background: #101a2d;
+
+    padding: 35px 15px;
+    margin-top: 40px;
+
+    color: #aab8ca;
+}
+
+footer h2 {
+    color: #00aaff;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 5px;
+        display: inline-block;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 35px 5%;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
